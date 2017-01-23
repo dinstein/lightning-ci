@@ -13,8 +13,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         curl git make automake autoconf libtool bitcoind build-essential libprotobuf-c-dev libsodium-dev libbase58-dev libsqlite3-dev libgmp-dev libsqlite3-dev git net-tools \
         # valgrind \
         ca-certificates python3 \
-	&& apt-get purge -y \
-		ca-certificates \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # grab gosu for easy step-down from root
